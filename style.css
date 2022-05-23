@@ -130,18 +130,6 @@ h5 {
   background-color: #fddcc4;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: "";
-}
-
-.swiper-button-prev.swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled {
-  opacity: 1;
-  cursor: auto;
-  pointer-events: none;
-}
-
 /* ========================================================================= */
 @media (max-width: 1279.98px) {
   [class*=__container] {
