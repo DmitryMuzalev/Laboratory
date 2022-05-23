@@ -1,3 +1,19 @@
+.our-friends-slider {
+  border: 2px solid red;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider-wrapper {
+}
+.slider {
+  border: 2px solid green;
+  display: flex;
+  gap: 90px;
+
+  width: 990px;
+}
 .card {
   width: 270px;
   height: 435px;
