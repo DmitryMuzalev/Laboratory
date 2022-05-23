@@ -1,4 +1,3 @@
-
 const petsArray = [
   {
     animalID: 1,
