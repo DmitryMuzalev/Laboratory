@@ -5,17 +5,23 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .slider-wrapper {
-}
-.slider {
   border: 2px solid green;
+  width: 990px;
+  overflow: hidden;
+}
+
+.slider {
   display: flex;
   gap: 90px;
-
-  width: 990px;
+  position: relative;
+  left: -1080px;
 }
+
 .card {
-  width: 270px;
+  border: 2px solid blue;
+  flex: 0 0 270px;
   height: 435px;
   border-radius: 9px;
   display: flex;
@@ -41,9 +47,6 @@
     letter-spacing: 0.06em;
   }
 
-  &__btn {
-  }
-
   &:hover {
     cursor: pointer;
     background-color: $color-light-xl;
@@ -67,9 +70,5 @@
   transition: all 0.5s;
   &:hover {
     background-color: $color-primary;
-  }
-  &_prev {
-  }
-  &_next {
   }
 }

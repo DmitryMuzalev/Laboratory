@@ -1,7 +1,7 @@
 
 const petsArray = [
   {
-    animalID: 1,
+    id: 1,
     name: "Jennifer",
     img: "../../assets/images/our-friends/jennifer.png",
     type: "Dog",
@@ -14,7 +14,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 2,
+    id: 2,
     name: "Sophia",
     img: "../../assets/images/our-friends/sophia.png",
     type: "Dog",
@@ -27,7 +27,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 3,
+    id: 3,
     name: "Woody",
     img: "../../assets/images/our-friends/woody.png",
     type: "Dog",
@@ -40,7 +40,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 4,
+    id: 4,
     name: "Scarlett",
     img: "../../assets/images/our-friends/scarlett.png",
     type: "Dog",
@@ -53,7 +53,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 5,
+    id: 5,
     name: "Katrine",
     img: "../../assets/images/our-friends/katrine.png",
     type: "Cat",
@@ -66,7 +66,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 6,
+    id: 6,
     name: "Timmy",
     img: "../../assets/images/our-friends/timmy.png",
     type: "Cat",
@@ -79,7 +79,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 7,
+    id: 7,
     name: "Freddie",
     img: "../../assets/images/our-friends/freddie.png",
     type: "Cat",
@@ -92,7 +92,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 8,
+    id: 8,
     name: "Charly",
     img: "../../assets/images/our-friends/charly.png",
     type: "Dog",
@@ -105,7 +105,7 @@ const petsArray = [
     parasites: ["lice", "fleas"],
   },
   {
-    animalID: 9,
+    id: 9,
     name: "Ryzhik",
     img: "../../assets/images/our-friends/ryzhik.png",
     type: "Dog",
@@ -118,7 +118,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 10,
+    id: 10,
     name: "Troy",
     img: "../../assets/images/our-friends/troy.png",
     type: "Dog",
@@ -131,7 +131,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 11,
+    id: 11,
     name: "Bun",
     img: "../../assets/images/our-friends/bun.png",
     type: "Dog",
@@ -144,7 +144,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 12,
+    id: 12,
     name: "Altai",
     img: "../../assets/images/our-friends/altai.png",
     type: "Cat",
@@ -157,7 +157,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 13,
+    id: 13,
     name: "Samson",
     img: "../../assets/images/our-friends/samson.png",
     type: "Cat",
@@ -170,7 +170,7 @@ const petsArray = [
     parasites: ["none"],
   },
   {
-    animalID: 14,
+    id: 14,
     name: "Bars",
     img: "../../assets/images/our-friends/bars.png",
     type: "Cat",
@@ -183,3 +183,4 @@ const petsArray = [
     parasites: ["none"],
   },
 ];
+
