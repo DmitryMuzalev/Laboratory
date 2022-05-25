@@ -159,3 +159,29 @@ body {
 .slider-btn:hover {
   background-color: #f1cdb3;
 }
+
+@keyframes move-prev {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
+}
+.transition-prev {
+  animation-name: move-prev;
+  animation-duration: 2s;
+}
+
+@keyframes move-next {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+.transition-next {
+  animation-name: move-next;
+  animation-duration: 2s;
+}
