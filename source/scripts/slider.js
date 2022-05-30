@@ -4,16 +4,17 @@ const BTN_PREV = document.querySelector(".slider-btn_prev");
 const BTN_NEXT = document.querySelector(".slider-btn_next");
 //_Slider:
 const SLIDER = document.querySelector(".slider");
-console.log(SLIDER);
+
 //_Cards
 let CARDS = SLIDER.children;
+
 //All animals ID
 const ALL_ID = petsArray.map((e) => String(e.id));
 //Current animals ID
 let CURRENT_ID = Array.from(CARDS).map((e) => e.dataset.id);
 
 //_Amount show cards
-let AMOUNT_SHOW_CARDS;
+let AMOUNT_SHOW_CARDS = 3;
 
 /* FUNCTIONS */
 //_Function get random free id card:
@@ -43,32 +44,19 @@ const createCard = (animal) => {
 `;
 };
 
-//!_Remove old cards:
-function removeLastElements(n) {
-  for (i = 0; i < n; i++) {
-    CARDS[CARDS.length - n - 1].remove();
-  }
-}
-function removeFirstElements(n) {
-  for (i = 0; i < n; i++) {
-    CARDS[n].remove();
-  }
-}
-
-//!_Add new cars:
+//_Add new cars:
 const addNewCards = (direction, value) => {
   let NEW_CARDS_ID;
   NEW_CARDS_ID = getRandomFreeID(ALL_ID, CURRENT_ID, value);
   NEW_CARDS_ID.forEach((e) => {
     let ANIMAL = petsArray.find((animal) => animal.id == e);
     let NEW_CARD = createCard(ANIMAL);
-
     if (direction === "left") {
-      removeLastElements(value);
       SLIDER.insertAdjacentHTML("afterbegin", NEW_CARD);
+      CURRENT_ID = NEW_CARDS_ID.concat(CURRENT_ID.slice(3));
     } else {
-      removeFirstElements(value);
       SLIDER.insertAdjacentHTML("beforeend", NEW_CARD);
+      CURRENT_ID = CURRENT_ID.slice(0, 3).concat(NEW_CARDS_ID);
     }
   });
 };
@@ -92,21 +80,20 @@ BTN_PREV.addEventListener("click", movePrev);
 //_Click on BTN_NEXT:
 BTN_NEXT.addEventListener("click", moveNext);
 
-/*
-  SLIDER.addEventListener("animationend", (animation) => {
-    let DIRECTION;
-    if (animation.animationName === "move-prev") {
-      SLIDER.classList.remove("transition-prev");
-      DIRECTION = "right";
-      addNewCards(DIRECTION, AMOUNT_SHOW_CARDS);
-    } else {
-      SLIDER.classList.remove("transition-next");
-      DIRECTION = "left";
-      addNewCards(DIRECTION, AMOUNT_SHOW_CARDS);
-    }
+//_Actions after animation:
+SLIDER.addEventListener("animationend", (animation) => {
+  let DIRECTION;
 
-    $sliderBtnPrev.addEventListener("click", movePrev);
-    $sliderBtnNext.addEventListener("click", moveNext);
-  });
+  if (animation.animationName === "move-prev") {
+    SLIDER.classList.remove("transition-prev");
+    DIRECTION = "left";
+  } else {
+    SLIDER.classList.remove("transition-next");
+    DIRECTION = "right";
+  }
 
-*/
+  addNewCards(DIRECTION, AMOUNT_SHOW_CARDS);
+
+  BTN_PREV.addEventListener("click", movePrev);
+  BTN_NEXT.addEventListener("click", moveNext);
+});

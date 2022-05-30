@@ -2,7 +2,7 @@ const petsArray = [
   {
     id: 1,
     name: "Jennifer",
-    img: "../../assets/images/our-friends/jennifer.png",
+    img: "/source/images/our-friends/jennifer.png",
     type: "Dog",
     breed: "Labrador",
     description:
@@ -15,7 +15,7 @@ const petsArray = [
   {
     id: 2,
     name: "Sophia",
-    img: "../../assets/images/our-friends/sophia.png",
+    img: "/source/images/our-friends/sophia.png",
     type: "Dog",
     breed: "Shih tzu",
     description:
@@ -28,7 +28,7 @@ const petsArray = [
   {
     id: 3,
     name: "Woody",
-    img: "../../assets/images/our-friends/woody.png",
+    img: "/source/images/our-friends/woody.png",
     type: "Dog",
     breed: "Golden Retriever",
     description:
@@ -41,7 +41,7 @@ const petsArray = [
   {
     id: 4,
     name: "Scarlett",
-    img: "../../assets/images/our-friends/scarlett.png",
+    img: "/source/images/our-friends/scarlett.png",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
@@ -54,7 +54,7 @@ const petsArray = [
   {
     id: 5,
     name: "Katrine",
-    img: "../../assets/images/our-friends/katrine.png",
+    img: "/source/images/our-friends/katrine.png",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -67,7 +67,7 @@ const petsArray = [
   {
     id: 6,
     name: "Timmy",
-    img: "../../assets/images/our-friends/timmy.png",
+    img: "/source/images/our-friends/timmy.png",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -80,7 +80,7 @@ const petsArray = [
   {
     id: 7,
     name: "Freddie",
-    img: "../../assets/images/our-friends/freddie.png",
+    img: "/source/images/our-friends/freddie.png",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -93,7 +93,7 @@ const petsArray = [
   {
     id: 8,
     name: "Charly",
-    img: "../../assets/images/our-friends/charly.png",
+    img: "/source/images/our-friends/charly.png",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
@@ -106,7 +106,7 @@ const petsArray = [
   {
     id: 9,
     name: "Ryzhik",
-    img: "../../assets/images/our-friends/ryzhik.png",
+    img: "/source/images/our-friends/ryzhik.png",
     type: "Dog",
     breed: "Сur",
     description:
@@ -119,7 +119,7 @@ const petsArray = [
   {
     id: 10,
     name: "Troy",
-    img: "../../assets/images/our-friends/troy.png",
+    img: "/source/images/our-friends/troy.png",
     type: "Dog",
     breed: "Сur",
     description:
@@ -132,7 +132,7 @@ const petsArray = [
   {
     id: 11,
     name: "Bun",
-    img: "../../assets/images/our-friends/bun.png",
+    img: "/source/images/our-friends/bun.png",
     type: "Dog",
     breed: "Сur",
     description:
@@ -145,7 +145,7 @@ const petsArray = [
   {
     id: 12,
     name: "Altai",
-    img: "../../assets/images/our-friends/altai.png",
+    img: "/source/images/our-friends/altai.png",
     type: "Cat",
     breed: "No breed",
     description:
@@ -158,7 +158,7 @@ const petsArray = [
   {
     id: 13,
     name: "Samson",
-    img: "../../assets/images/our-friends/samson.png",
+    img: "/source/images/our-friends/samson.png",
     type: "Cat",
     breed: "No breed",
     description:
@@ -171,7 +171,7 @@ const petsArray = [
   {
     id: 14,
     name: "Bars",
-    img: "../../assets/images/our-friends/bars.png",
+    img: "/source/images/our-friends/bars.png",
     type: "Cat",
     breed: "No breed",
     description:
