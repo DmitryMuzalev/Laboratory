@@ -44,7 +44,19 @@ const createCard = (animal) => {
 `;
 };
 
-//_Add new cars:
+//_Remove  cards:
+function removeLastElements(n) {
+  for (let i = 0; i < n; i++) {
+    SLIDER.lastElementChild.remove();
+  }
+}
+function removeFirstElements(n) {
+  for (let i = 0; i < n; i++) {
+    SLIDER.firstElementChild.remove();
+  }
+}
+
+//_Add new cards:
 const addNewCards = (direction, value) => {
   let NEW_CARDS_ID;
   NEW_CARDS_ID = getRandomFreeID(ALL_ID, CURRENT_ID, value);
@@ -53,12 +65,12 @@ const addNewCards = (direction, value) => {
     let NEW_CARD = createCard(ANIMAL);
     if (direction === "left") {
       SLIDER.insertAdjacentHTML("afterbegin", NEW_CARD);
-      CURRENT_ID = NEW_CARDS_ID.concat(CURRENT_ID.slice(3));
     } else {
       SLIDER.insertAdjacentHTML("beforeend", NEW_CARD);
-      CURRENT_ID = CURRENT_ID.slice(0, 3).concat(NEW_CARDS_ID);
     }
   });
+  CURRENT_ID = Array.from(CARDS).map((e) => e.dataset.id);
+  console.log(CURRENT_ID);
 };
 
 //_Move previous:
@@ -87,11 +99,12 @@ SLIDER.addEventListener("animationend", (animation) => {
   if (animation.animationName === "move-prev") {
     SLIDER.classList.remove("transition-prev");
     DIRECTION = "left";
+    removeLastElements(3);
   } else {
     SLIDER.classList.remove("transition-next");
     DIRECTION = "right";
+    removeFirstElements(3);
   }
-
   addNewCards(DIRECTION, AMOUNT_SHOW_CARDS);
 
   BTN_PREV.addEventListener("click", movePrev);

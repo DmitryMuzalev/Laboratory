@@ -89,7 +89,7 @@ body {
 }
 
 .our-friends-slider {
-  border: 2px solid red;
+  /*  border: 2px solid red;*/
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -97,7 +97,7 @@ body {
 }
 
 .slider-wrapper {
-  border: 2px solid green;
+  /*  border: 2px solid green;*/
   width: 990px;
   overflow: hidden;
 }
@@ -110,7 +110,7 @@ body {
 }
 
 .card {
-  border: 2px solid blue;
+  /*  border: 2px solid blue;*/
   flex: 0 0 270px;
   height: 435px;
   border-radius: 9px;
