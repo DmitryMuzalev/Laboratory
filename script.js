@@ -190,20 +190,21 @@ const BTN_PREV = document.querySelector(".slider-btn_prev");
 const BTN_NEXT = document.querySelector(".slider-btn_next");
 //_Slider:
 const SLIDER = document.querySelector(".slider");
-
 //_Cards
 let CARDS = SLIDER.children;
-
 //All animals ID
 const ALL_ID = petsArray.map((e) => String(e.id));
 //Current animals ID
-let CURRENT_ID = Array.from(CARDS).map((e) => e.dataset.id);
-
+let CURRENT_ID = getCurrentID();
 //_Amount show cards
 let AMOUNT_SHOW_CARDS = 3;
 
 /* FUNCTIONS */
-//_Function get random free id card:
+//_Function current animals ID:
+function getCurrentID() {
+  return Array.from(CARDS).map((e) => e.dataset.id);
+}
+//_Function get random animals ID:
 const getRandomFreeID = (all, current, value) => {
   let RANDOM_ID = [];
   let FREE_ID = all.filter((e) => !current.includes(e));
@@ -213,7 +214,6 @@ const getRandomFreeID = (all, current, value) => {
   }
   return RANDOM_ID;
 };
-
 //_Function create card:
 const createCard = (animal) => {
   return `
@@ -229,20 +229,18 @@ const createCard = (animal) => {
   </div>
 `;
 };
-
-//_Remove  cards:
-function removeLastElements(n) {
+//_Function remove  cards:
+const removeLastElements = (n) => {
   for (let i = 0; i < n; i++) {
     SLIDER.lastElementChild.remove();
   }
-}
-function removeFirstElements(n) {
+};
+const removeFirstElements = (n) => {
   for (let i = 0; i < n; i++) {
     SLIDER.firstElementChild.remove();
   }
-}
-
-//_Add new cards:
+};
+//_Function add new cards:
 const addNewCards = (direction, value) => {
   let NEW_CARDS_ID;
   NEW_CARDS_ID = getRandomFreeID(ALL_ID, CURRENT_ID, value);
@@ -255,17 +253,15 @@ const addNewCards = (direction, value) => {
       SLIDER.insertAdjacentHTML("beforeend", NEW_CARD);
     }
   });
-  CURRENT_ID = Array.from(CARDS).map((e) => e.dataset.id);
-  console.log(CURRENT_ID);
+  CURRENT_ID = getCurrentID();
 };
-
-//_Move previous:
+//_Function move previous:
 const movePrev = () => {
   SLIDER.classList.add("transition-prev");
   BTN_PREV.removeEventListener("click", movePrev);
   BTN_NEXT.removeEventListener("click", moveNext);
 };
-//_Move next:
+//_Function move next:
 const moveNext = () => {
   SLIDER.classList.add("transition-next");
   BTN_PREV.removeEventListener("click", movePrev);
@@ -277,7 +273,6 @@ const moveNext = () => {
 BTN_PREV.addEventListener("click", movePrev);
 //_Click on BTN_NEXT:
 BTN_NEXT.addEventListener("click", moveNext);
-
 //_Actions after animation:
 SLIDER.addEventListener("animationend", (animation) => {
   let DIRECTION;
@@ -285,11 +280,11 @@ SLIDER.addEventListener("animationend", (animation) => {
   if (animation.animationName === "move-prev") {
     SLIDER.classList.remove("transition-prev");
     DIRECTION = "left";
-    removeLastElements(3);
+    removeLastElements(AMOUNT_SHOW_CARDS);
   } else {
     SLIDER.classList.remove("transition-next");
     DIRECTION = "right";
-    removeFirstElements(3);
+    removeFirstElements(AMOUNT_SHOW_CARDS);
   }
   addNewCards(DIRECTION, AMOUNT_SHOW_CARDS);
 
