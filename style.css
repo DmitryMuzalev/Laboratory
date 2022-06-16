@@ -88,8 +88,13 @@ body {
   background-color: #fddcc4;
 }
 
+@media (max-width: 1279.98px) {
+  [class*=__container] {
+    padding: 0 30px;
+  }
+}
 .our-friends-slider {
-  /*  border: 2px solid red;*/
+  border: 2px solid red;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -184,4 +189,36 @@ body {
 .transition-next {
   animation-name: move-next;
   animation-duration: 2s;
+}
+
+@media (max-width: 1279.98px) {
+  .slider-wrapper {
+    width: 580px;
+  }
+
+  .slider {
+    gap: 40px;
+    left: -620px;
+  }
+
+  .card:nth-child(3), .card:nth-child(6), .card:nth-child(9) {
+    display: none;
+  }
+
+  @keyframes move-prev {
+    from {
+      left: -620px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  @keyframes move-next {
+    from {
+      left: -620px;
+    }
+    to {
+      left: -1240px;
+    }
+  }
 }
