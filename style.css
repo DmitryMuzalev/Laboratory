@@ -59,6 +59,43 @@ body {
   align-items: center;
 }
 
+h1 {
+  display: none;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 2.2px;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 44px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 35px;
+  letter-spacing: 0.06em;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 1.13px;
+}
+
+h5 {
+  font-size: 15px;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+}
+
 .paragraph-l {
   font-weight: 400;
   font-size: 15px;
@@ -280,4 +317,90 @@ body {
     right: 29%;
     transform: translateX(50%);
   }
+}
+.modal-window {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(41, 41, 41, 0.6);
+}
+.modal-window__body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-window__content {
+  position: relative;
+  width: 900px;
+  border-radius: 9px;
+  background: #fafafa;
+  display: flex;
+  justify-content: space-between;
+}
+.modal-window__image img {
+  border-radius: 9px 0 0 9px;
+  height: 500px;
+  width: 500px;
+}
+.modal-window__info {
+  width: 351px;
+  margin: 50px 20px 0px 0px;
+}
+.modal-window__close {
+  position: absolute;
+  top: -52px;
+  right: -42px;
+  cursor: pointer;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: 2px solid #f1cdb3;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-window-info__title {
+  margin: 0px 0px 10px 0px;
+}
+.modal-window-info__subtitle {
+  margin: 0px 0px 40px 0px;
+}
+.modal-window-info__text {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  margin: 0px 0px 40px 0px;
+}
+.modal-window-info__data-list li {
+  position: relative;
+  padding: 0px 0px 0px 14px;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+}
+.modal-window-info__data-list li:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+.modal-window-info__data-list li span {
+  color: #000000;
+  font-weight: 700;
+}
+.modal-window-info__data-list li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #f1cdb3;
+  transform: translateY(-50%);
 }
