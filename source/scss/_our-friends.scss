@@ -1,5 +1,5 @@
 .our-friends-slider {
-  border: 2px solid red;
+  /*  border: 2px solid red;*/
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -138,6 +138,36 @@
 }
 
 @media (max-width: 767.98px) {
+  .slider-wrapper {
+    width: 270px;
+  }
+  .card {
+    &:nth-child(2),
+    &:nth-child(5),
+    &:nth-child(8) {
+      display: none;
+    }
+  }
+  .slider {
+    gap: 40px;
+    left: -310px;
+  }
+  @keyframes move-prev {
+    from {
+      left: -310px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  @keyframes move-next {
+    from {
+      left: -310px;
+    }
+    to {
+      left: -620px;
+    }
+  }
 }
 
 @media (max-width: 479.98px) {
