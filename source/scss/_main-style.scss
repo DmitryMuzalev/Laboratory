@@ -59,3 +59,9 @@ body {
     padding: 0 30px;
   }
 }
+
+@media (max-width: 479.98px) {
+  [class*="__container"] {
+    padding: 0 10px;
+  }
+}

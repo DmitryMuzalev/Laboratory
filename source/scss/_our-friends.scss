@@ -170,5 +170,24 @@
   }
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 499.98px) {
+  .our-friends-slider {
+    position: relative;
+    flex-direction: column;
+  }
+  .slider-wrapper {
+    order: -1;
+  }
+  .slider-btn {
+    position: absolute;
+    bottom: -70px;
+    &_prev {
+      left: 29%;
+      transform: translateX(-50%);
+    }
+    &_next {
+      right: 29%;
+      transform: translateX(50%);
+    }
+  }
 }
