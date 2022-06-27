@@ -319,6 +319,8 @@ h5 {
   }
 }
 .modal-window {
+  /*  opacity: 0;
+  visibility: hidden;*/
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -346,8 +348,13 @@ h5 {
   width: 500px;
 }
 .modal-window__info {
+  position: relative;
   width: 351px;
-  margin: 50px 20px 0px 0px;
+  height: 400px;
+  overflow: auto;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin: 50px 0px;
 }
 .modal-window__close {
   position: absolute;

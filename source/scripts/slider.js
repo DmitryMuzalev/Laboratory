@@ -1,4 +1,6 @@
 /* VARIABLES */
+//_Body:
+const BODY = document.body;
 //_Buttons:
 const BTN_PREV = document.querySelector(".slider-btn_prev");
 const BTN_NEXT = document.querySelector(".slider-btn_next");
@@ -101,6 +103,7 @@ SLIDER.addEventListener("animationend", (animation) => {
     removeFirstElements(AMOUNT_SHOW_CARDS);
   }
   addNewCards(DIRECTION, AMOUNT_SHOW_CARDS);
+  addEventCARDS();
 
   BTN_PREV.addEventListener("click", movePrev);
   BTN_NEXT.addEventListener("click", moveNext);
