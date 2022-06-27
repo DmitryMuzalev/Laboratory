@@ -185,8 +185,8 @@ const petsArray = [
 ];
 
 /* VARIABLES */
-//_Body:
-const BODY = document.body;
+//_Section:
+const SECTION = document.querySelector("section");
 //_Buttons:
 const BTN_PREV = document.querySelector(".slider-btn_prev");
 const BTN_NEXT = document.querySelector(".slider-btn_next");
@@ -328,10 +328,10 @@ const createPopup = function (animal) {
         </div>
       </div>
     </div>
-  </div>;`;
+  </div>`;
 };
 const addPopup = function (animal) {
-  SLIDER.insertAdjacentHTML("beforeend", createPopup(animal));
+  SECTION.insertAdjacentHTML("afterend", createPopup(animal));
 };
 const showPopup = function (element) {
   let ID = this.dataset.id;

@@ -1,6 +1,6 @@
 /* VARIABLES */
-//_Body:
-const BODY = document.body;
+//_Section:
+const SECTION = document.querySelector("section");
 //_Buttons:
 const BTN_PREV = document.querySelector(".slider-btn_prev");
 const BTN_NEXT = document.querySelector(".slider-btn_next");

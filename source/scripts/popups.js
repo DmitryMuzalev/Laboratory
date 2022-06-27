@@ -31,10 +31,10 @@ const createPopup = function (animal) {
         </div>
       </div>
     </div>
-  </div>;`;
+  </div>`;
 };
 const addPopup = function (animal) {
-  SLIDER.insertAdjacentHTML("beforeend", createPopup(animal));
+  SECTION.insertAdjacentHTML("afterend", createPopup(animal));
 };
 const showPopup = function (element) {
   let ID = this.dataset.id;
