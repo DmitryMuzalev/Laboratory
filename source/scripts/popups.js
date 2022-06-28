@@ -26,12 +26,21 @@ const createPopup = function (animal) {
             </li>
           </ul>
         </div>
-        <div class="modal-window__close">
+        <div class="modal-window__close close-popup">
           <img src="/source/images/modal/close.svg" alt="Button close" />
         </div>
       </div>
     </div>
   </div>`;
+};
+const removePopup = function () {
+  const POPUP = document.querySelector(".modal-window");
+  POPUP.remove();
+  document.removeEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      removePopup();
+    }
+  });
 };
 const addPopup = function (animal) {
   SECTION.insertAdjacentHTML("afterend", createPopup(animal));
@@ -40,6 +49,13 @@ const showPopup = function (element) {
   let ID = this.dataset.id;
   let ANIMAL = petsArray.find((animal) => animal.id == ID);
   addPopup(ANIMAL);
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      removePopup();
+    }
+  });
+  const BTN_CLOSE_POPUP = document.querySelector(".close-popup");
+  BTN_CLOSE_POPUP.addEventListener("click", removePopup);
 };
 
 function addEventCARDS() {
