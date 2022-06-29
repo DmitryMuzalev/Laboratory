@@ -81,14 +81,15 @@
       padding: 0px 0px 0px 14px;
       font-family: Georgia, serif;
       font-size: 15px;
-      line-height: 1.1;
+      line-height: 1.2;
       letter-spacing: 0.06em;
+      color: $color-black;
+      font-weight: 700;
       &:not(:last-child) {
         margin: 0px 0px 10px 0px;
       }
       span {
-        color: $color-black;
-        font-weight: 700;
+        font-weight: 400;
       }
     }
     li:before {
