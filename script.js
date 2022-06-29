@@ -185,8 +185,6 @@ const petsArray = [
 ];
 
 /* VARIABLES */
-//_Section:
-const SECTION = document.querySelector("section");
 //_Buttons:
 const BTN_PREV = document.querySelector(".slider-btn_prev");
 const BTN_NEXT = document.querySelector(".slider-btn_next");
@@ -289,70 +287,18 @@ SLIDER.addEventListener("animationend", (animation) => {
     removeFirstElements(AMOUNT_SHOW_CARDS);
   }
   addNewCards(DIRECTION, AMOUNT_SHOW_CARDS);
+
   addEventCARDS();
 
   BTN_PREV.addEventListener("click", movePrev);
   BTN_NEXT.addEventListener("click", moveNext);
 });
 
-const createPopup = function (animal) {
-  return ` <div class="modal-window">
-    <div class="modal-window__body">
-      <div class="modal-window__content">
-        <div class="modal-window__image">
-          <img src=${animal.img} alt=${animal.name} />
-        </div>
-        <div class="modal-window__info modal-window-info">
-          <h3 class="modal-window-info__title">${animal.name}</h3>
-          <h4 class="modal-window-info__subtitle">${animal.type} - ${animal.breed}</h4>
-          <p class="modal-window-info__text">
-          ${animal.description}
-          </p>
-          <ul class="modal-window-info__data-list">
-            <li>
-              <span>Age: </span>${animal.age}
-            </li>
-            <li>
-              <span>Inoculations: </span>${animal.inoculations}
-            </li>
-            <li>
-              <span>Diseases: </span>${animal.diseases}
-            </li>
-            <li>
-              <span>Parasites: </span>${animal.parasites}
-            </li>
-          </ul>
-        </div>
-        <div class="modal-window__close close-popup">
-          <img src="/source/images/modal/close.svg" alt="Button close" />
-        </div>
-      </div>
-    </div>
-  </div>`;
-};
-const removePopup = function () {
-  const POPUP = document.querySelector(".modal-window");
-  POPUP.remove();
-  document.removeEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      removePopup();
-    }
-  });
-};
-const addPopup = function (animal) {
-  SECTION.insertAdjacentHTML("afterend", createPopup(animal));
-};
-const showPopup = function (element) {
-  let ID = this.dataset.id;
-  let ANIMAL = petsArray.find((animal) => animal.id == ID);
-  addPopup(ANIMAL);
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      removePopup();
-    }
-  });
-  const BTN_CLOSE_POPUP = document.querySelector(".close-popup");
-  BTN_CLOSE_POPUP.addEventListener("click", removePopup);
+const POPUP = document.querySelector(".modal-window");
+
+const showPopup = function () {
+  POPUP.classList.add("open");
+  /*console.log(this.dataset.id);*/
 };
 
 function addEventCARDS() {
