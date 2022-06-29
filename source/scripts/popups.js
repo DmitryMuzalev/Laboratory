@@ -1,4 +1,6 @@
 /* VARIABLES */
+//_BODY:
+const BODY = document.querySelector("body");
 //_POPUP:
 const POPUP = document.querySelector(".modal-window");
 //_POPUP components:
@@ -44,23 +46,28 @@ function createPopup(animal) {
   POPUP_DISEASES.innerHTML = animal.diseases;
   POPUP_PARASITES.innerHTML = animal.parasites;
   //_Escape button press
-  document.addEventListener("keydown", pressEscape);
+  document.addEventListener("keydown", pressKeys);
 }
 //_Function to display modal window:
 function showPopup() {
   let ANIMAL = petsArray.find((e) => e.id == this.dataset.id);
   createPopup(ANIMAL);
   POPUP.classList.add("open");
+  BODY.classList.add("lock");
 }
 //_Function to close modal window:
 function closePopup() {
   POPUP.classList.remove("open");
-  document.removeEventListener("keydown", pressEscape);
+  BODY.classList.remove("lock");
+  document.removeEventListener("keydown", pressKeys);
 }
 
 //_Function to close modal window on Escape:
-function pressEscape(e) {
+function pressKeys(e) {
   if (e.key === "Escape") {
     closePopup();
+  }
+  if (e.key === "Tab") {
+    e.preventDefault();
   }
 }

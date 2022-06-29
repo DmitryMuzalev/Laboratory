@@ -55,8 +55,8 @@ body {
   line-height: 1;
   height: 100vh;
   color: #292929;
-  display: flex;
-  align-items: center;
+  /*  display: flex;
+  align-items: center;*/
 }
 
 h1 {
@@ -421,4 +421,9 @@ h5 {
 .open {
   opacity: 1;
   visibility: visible;
+}
+
+.lock {
+  overflow: hidden;
+  padding-right: 17px;
 }
