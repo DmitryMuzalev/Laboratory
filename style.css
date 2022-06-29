@@ -369,6 +369,10 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s;
+}
+.modal-window__close:hover {
+  background-color: #f1cdb3;
 }
 
 .modal-window-info__title {
