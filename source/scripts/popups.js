@@ -44,7 +44,7 @@ function createPopup(animal) {
   POPUP_DISEASES.innerHTML = animal.diseases;
   POPUP_PARASITES.innerHTML = animal.parasites;
   //_Escape button press
-  document.addEventListener("keydown", closePopup);
+  document.addEventListener("keydown", pressEscape);
 }
 //_Function to display modal window:
 function showPopup() {
@@ -55,5 +55,12 @@ function showPopup() {
 //_Function to close modal window:
 function closePopup() {
   POPUP.classList.remove("open");
-  document.removeEventListener("keydown", closePopup);
+  document.removeEventListener("keydown", pressEscape);
+}
+
+//_Function to close modal window on Escape:
+function pressEscape(e) {
+  if (e.key === "Escape") {
+    closePopup();
+  }
 }

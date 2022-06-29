@@ -327,6 +327,7 @@ h5 {
   top: 0;
   left: 0;
   background: rgba(41, 41, 41, 0.6);
+  transition: all 0.5s;
 }
 .modal-window__body {
   height: 100%;
