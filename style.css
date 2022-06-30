@@ -169,13 +169,13 @@ h5 {
   transition: all 0.5s;
 }
 .card__image {
-  width: 270px;
-  height: 270px;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
 .card__image img {
+  width: 270px;
+  height: 270px;
   border-radius: 9px 9px 0 0;
 }
 .card__title {
@@ -345,6 +345,11 @@ h5 {
   background: #fafafa;
   display: flex;
   justify-content: space-between;
+  transform-style: preserve-3d;
+  transform: rotateY(-70deg);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
 }
 .modal-window__image img {
   border-radius: 9px 0 0 9px;
@@ -426,7 +431,12 @@ h5 {
   visibility: visible;
 }
 
+.open-content {
+  opacity: 1;
+  visibility: visible;
+  transform: rotateY(0deg);
+}
+
 .lock {
   overflow: hidden;
-  padding-right: 17px;
 }

@@ -32,12 +32,12 @@
   transition: all 0.5s;
 
   &__image {
-    width: 270px;
-    height: 270px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     img {
+      width: 270px;
+      height: 270px;
       border-radius: 9px 9px 0 0;
     }
   }

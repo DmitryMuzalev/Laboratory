@@ -310,9 +310,14 @@ SLIDER.addEventListener("animationend", (animation) => {
 /* VARIABLES */
 //_BODY:
 const BODY = document.querySelector("body");
+//PADDING_LOCK
+const PADDING_LOCK = document.querySelectorAll(".padding-lock");
+
 //_POPUP:
 const POPUP = document.querySelector(".modal-window");
+
 //_POPUP components:
+const POPUP_CONTENT = POPUP.querySelector(".modal-window__content");
 let POPUP_IMAGE = POPUP.querySelector(".modal-window__image img");
 let POPUP_TITLE = POPUP.querySelector(".modal-window-info__title");
 let POPUP_SUBTITLE = POPUP.querySelector(".modal-window-info__subtitle");
@@ -339,7 +344,7 @@ POPUP_BTN_CLOSE.addEventListener("click", closePopup);
 
 POPUP.addEventListener("click", function (e) {
   if (!e.target.closest(".modal-window__content")) {
-    POPUP.classList.remove("open");
+    closePopup();
   }
 });
 
@@ -361,16 +366,17 @@ function createPopup(animal) {
 function showPopup() {
   let ANIMAL = petsArray.find((e) => e.id == this.dataset.id);
   createPopup(ANIMAL);
+  paddingLock();
   POPUP.classList.add("open");
-  BODY.classList.add("lock");
+  POPUP_CONTENT.classList.add("open-content");
 }
 //_Function to close modal window:
 function closePopup() {
   POPUP.classList.remove("open");
-  BODY.classList.remove("lock");
+  POPUP_CONTENT.classList.remove("open-content");
+  paddingUnLock();
   document.removeEventListener("keydown", pressKeys);
 }
-
 //_Function to close modal window on Escape:
 function pressKeys(e) {
   if (e.key === "Escape") {
@@ -379,4 +385,19 @@ function pressKeys(e) {
   if (e.key === "Tab") {
     e.preventDefault();
   }
+}
+//_Functions for controlling scrolling at the moments of opening and closing the modal window :
+function paddingLock() {
+  for (let i = 0; i < PADDING_LOCK.length; i++) {
+    PADDING_LOCK[i].style.paddingRight = "17px";
+  }
+  BODY.classList.add("lock");
+}
+function paddingUnLock() {
+  setTimeout(function () {
+    for (let i = 0; i < PADDING_LOCK.length; i++) {
+      PADDING_LOCK[i].style.paddingRight = "0px";
+    }
+    BODY.classList.remove("lock");
+  }, 500);
 }

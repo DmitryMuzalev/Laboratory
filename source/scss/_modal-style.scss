@@ -23,6 +23,11 @@
     background: $color-light-s;
     display: flex;
     justify-content: space-between;
+    transform-style: preserve-3d;
+    transform: rotateY(-70deg);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
   }
 
   &__image {
@@ -116,7 +121,12 @@
   visibility: visible;
 }
 
+.open-content {
+  opacity: 1;
+  visibility: visible;
+  transform: rotateY(0deg);
+}
+
 .lock {
   overflow: hidden;
-  padding-right: 17px;
 }
