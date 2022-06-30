@@ -2,7 +2,7 @@ const petsArray = [
   {
     id: 1,
     name: "Jennifer",
-    img: "/source/images/our-friends/jennifer.png",
+    img: "/source/images/our-friends/jennifer.jpg",
     type: "Dog",
     breed: "Labrador",
     description:
@@ -15,7 +15,7 @@ const petsArray = [
   {
     id: 2,
     name: "Sophia",
-    img: "/source/images/our-friends/sophia.png",
+    img: "/source/images/our-friends/sophia.jpg",
     type: "Dog",
     breed: "Shih tzu",
     description:
@@ -28,7 +28,7 @@ const petsArray = [
   {
     id: 3,
     name: "Woody",
-    img: "/source/images/our-friends/woody.png",
+    img: "/source/images/our-friends/woody.jpg",
     type: "Dog",
     breed: "Golden Retriever",
     description:
@@ -41,7 +41,7 @@ const petsArray = [
   {
     id: 4,
     name: "Scarlett",
-    img: "/source/images/our-friends/scarlett.png",
+    img: "/source/images/our-friends/scarlett.jpg",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
@@ -54,7 +54,7 @@ const petsArray = [
   {
     id: 5,
     name: "Katrine",
-    img: "/source/images/our-friends/katrine.png",
+    img: "/source/images/our-friends/katrine.jpg",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -67,7 +67,7 @@ const petsArray = [
   {
     id: 6,
     name: "Timmy",
-    img: "/source/images/our-friends/timmy.png",
+    img: "/source/images/our-friends/timmy.jpg",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -80,7 +80,7 @@ const petsArray = [
   {
     id: 7,
     name: "Freddie",
-    img: "/source/images/our-friends/freddie.png",
+    img: "/source/images/our-friends/freddie.jpg",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -93,7 +93,7 @@ const petsArray = [
   {
     id: 8,
     name: "Charly",
-    img: "/source/images/our-friends/charly.png",
+    img: "/source/images/our-friends/charly.jpg",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
@@ -106,7 +106,7 @@ const petsArray = [
   {
     id: 9,
     name: "Ryzhik",
-    img: "/source/images/our-friends/ryzhik.png",
+    img: "/source/images/our-friends/ryzhik.jpg",
     type: "Dog",
     breed: "Сur",
     description:
@@ -119,7 +119,7 @@ const petsArray = [
   {
     id: 10,
     name: "Troy",
-    img: "/source/images/our-friends/troy.png",
+    img: "/source/images/our-friends/troy.jpg",
     type: "Dog",
     breed: "Сur",
     description:
@@ -132,7 +132,7 @@ const petsArray = [
   {
     id: 11,
     name: "Bun",
-    img: "/source/images/our-friends/bun.png",
+    img: "/source/images/our-friends/bun.jpg",
     type: "Dog",
     breed: "Сur",
     description:
@@ -145,7 +145,7 @@ const petsArray = [
   {
     id: 12,
     name: "Altai",
-    img: "/source/images/our-friends/altai.png",
+    img: "/source/images/our-friends/altai.jpg",
     type: "Cat",
     breed: "No breed",
     description:
@@ -158,7 +158,7 @@ const petsArray = [
   {
     id: 13,
     name: "Samson",
-    img: "/source/images/our-friends/samson.png",
+    img: "/source/images/our-friends/samson.jpg",
     type: "Cat",
     breed: "No breed",
     description:
@@ -171,11 +171,24 @@ const petsArray = [
   {
     id: 14,
     name: "Bars",
-    img: "/source/images/our-friends/bars.png",
+    img: "/source/images/our-friends/bars.jpg",
     type: "Cat",
     breed: "No breed",
     description:
       "Bars came to us at the end of 2021 under the OSVV program. Together with their sister, they were still kittens. My sister was lucky, she was quickly noticed and she went home. And Bars still lives with us. He is a gentle, calm, slightly shy boy. He needs a little time to get used to and trust. Very handsome, with a chic fur coat and amber eyes.The guy was born around April 2021, healthy, vaccinated, neutered, tests for infections are negative, communicates well with other cats, not a bully, loves to play.",
+    age: "1 year",
+    inoculations: ["parvovirus"],
+    diseases: ["none"],
+    parasites: ["none"],
+  },
+  {
+    id: 15,
+    name: "Bolto",
+    img: "/source/images/our-friends/bolto.jpg",
+    type: "Dog",
+    breed: "No breed",
+    description:
+      "Short-legged puppy Bolto. Very contact, loves to be stroked on a silk skin, and also kissed and squeezed. She got her nickname because even in the most difficult times, when there was practically nothing to eat, she ate her brothers and thus ate her sides more than theirs. When times started to improve, Bolto fell in love with sleeping on the couch, cutting her nails, bathing with shampoo, and, of course, love for sweets did not go anywhere. Leader by nature.",
     age: "1 year",
     inoculations: ["parvovirus"],
     diseases: ["none"],

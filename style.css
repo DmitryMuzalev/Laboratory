@@ -175,6 +175,9 @@ h5 {
   display: flex;
   justify-content: center;
 }
+.card__image img {
+  border-radius: 9px 9px 0 0;
+}
 .card__title {
   font-family: Georgia, serif;
   font-weight: 400;

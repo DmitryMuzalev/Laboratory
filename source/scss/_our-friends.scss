@@ -37,6 +37,9 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    img {
+      border-radius: 9px 9px 0 0;
+    }
   }
 
   &__title {
