@@ -169,7 +169,6 @@ h5 {
   transition: all 0.5s;
 }
 .card__image {
-  overflow: hidden;
   display: flex;
   justify-content: center;
 }
@@ -439,4 +438,34 @@ h5 {
 
 .lock {
   overflow: hidden;
+}
+
+@media (max-width: 1279.98px) {
+  .modal-window__content {
+    width: 630px;
+  }
+  .modal-window__image img {
+    height: 350px;
+    width: 350px;
+  }
+  .modal-window__info {
+    width: 260px;
+    height: 303px;
+    padding-right: 10px;
+    margin: 10px 0px 37px;
+  }
+
+  .modal-window-info__subtitle {
+    margin: 0px 0px 20px 0px;
+  }
+  .modal-window-info__text {
+    font-size: 13px;
+    margin: 0px 0px 20px 0px;
+  }
+  .modal-window-info__data-list li {
+    line-height: 1.1;
+  }
+  .modal-window-info__data-list li:not(:last-child) {
+    margin: 0px 0px 5px 0px;
+  }
 }

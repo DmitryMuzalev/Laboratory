@@ -130,3 +130,42 @@
 .lock {
   overflow: hidden;
 }
+
+@media (max-width: 1279.98px) {
+  .modal-window {
+    &__content {
+      width: 630px;
+    }
+    &__image {
+      img {
+        height: 350px;
+        width: 350px;
+      }
+    }
+    &__info {
+      width: 260px;
+      height: 303px;
+      padding-right: 10px;
+      margin: 10px 0px 37px;
+    }
+  }
+  .modal-window-info {
+    &__subtitle {
+      margin: 0px 0px 20px 0px;
+    }
+
+    &__text {
+      font-size: 13px;
+      margin: 0px 0px 20px 0px;
+    }
+
+    &__data-list {
+      li {
+        line-height: 1.1;
+        &:not(:last-child) {
+          margin: 0px 0px 5px 0px;
+        }
+      }
+    }
+  }
+}
