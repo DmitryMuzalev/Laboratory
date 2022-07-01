@@ -55,8 +55,6 @@ body {
   line-height: 1;
   height: 100vh;
   color: #292929;
-  /*  display: flex;
-  align-items: center;*/
 }
 
 h1 {
@@ -136,14 +134,12 @@ h5 {
   }
 }
 .our-friends-slider {
-  /*  border: 2px solid red;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .slider-wrapper {
-  /*  border: 2px solid green;*/
   width: 990px;
   overflow: hidden;
 }
@@ -156,7 +152,6 @@ h5 {
 }
 
 .card {
-  /*  border: 2px solid blue;*/
   flex: 0 0 270px;
   height: 435px;
   border-radius: 9px;
