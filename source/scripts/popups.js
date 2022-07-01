@@ -79,8 +79,9 @@ function pressKeys(e) {
 }
 //_Functions for controlling scrolling at the moments of opening and closing the modal window :
 function paddingLock() {
+  const paddingRightValue = window.innerWidth - BODY.offsetWidth + "px";
   for (let i = 0; i < PADDING_LOCK.length; i++) {
-    PADDING_LOCK[i].style.paddingRight = "17px";
+    PADDING_LOCK[i].style.paddingRight = paddingRightValue;
   }
   BODY.classList.add("lock");
 }

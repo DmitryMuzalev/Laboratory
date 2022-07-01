@@ -137,7 +137,6 @@ h5 {
 }
 .our-friends-slider {
   /*  border: 2px solid red;*/
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
