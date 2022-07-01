@@ -468,3 +468,31 @@ h5 {
     margin: 0px 0px 5px 0px;
   }
 }
+@media (max-width: 767.98px) {
+  .modal-window__content {
+    width: 240px;
+  }
+  .modal-window__image {
+    display: none;
+  }
+  .modal-window__info {
+    width: 220px;
+    height: 321px;
+    padding-right: 5px;
+    margin: 10px;
+  }
+  .modal-window__close {
+    right: -30px;
+  }
+
+  .modal-window-info__title {
+    text-align: center;
+  }
+  .modal-window-info__subtitle {
+    text-align: center;
+  }
+  .modal-window-info__text {
+    text-align: justify;
+    font-size: 13px;
+  }
+}

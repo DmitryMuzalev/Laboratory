@@ -169,3 +169,35 @@
     }
   }
 }
+
+@media (max-width: 767.98px) {
+  .modal-window {
+    &__content {
+      width: 240px;
+    }
+    &__image {
+      display: none;
+    }
+    &__info {
+      width: 220px;
+      height: 321px;
+      padding-right: 5px;
+      margin: 10px;
+    }
+    &__close {
+      right: -30px;
+    }
+  }
+  .modal-window-info {
+    &__title {
+      text-align: center;
+    }
+    &__subtitle {
+      text-align: center;
+    }
+    &__text {
+      text-align: justify;
+      font-size: 13px;
+    }
+  }
+}
