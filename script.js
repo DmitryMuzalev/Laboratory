@@ -209,8 +209,6 @@ let CARDS = SLIDER.children;
 const ALL_ID = petsArray.map((e) => String(e.id));
 //Current animals ID
 let CURRENT_ID = getCurrentID();
-//_Amount show cards
-let AMOUNT_SHOW_CARDS = 3;
 
 /* FUNCTIONS */
 //_Function current animals ID:
@@ -218,10 +216,10 @@ function getCurrentID() {
   return Array.from(CARDS).map((e) => e.dataset.id);
 }
 //_Function get random animals ID:
-const getRandomFreeID = (all, current, value) => {
+const getRandomFreeID = (all, current) => {
   let RANDOM_ID = [];
   let FREE_ID = all.filter((e) => !current.includes(e));
-  while (RANDOM_ID.length !== value) {
+  while (RANDOM_ID.length !== 3) {
     let i = Math.floor(Math.random() * FREE_ID.length);
     if (!RANDOM_ID.includes(FREE_ID[i])) RANDOM_ID.push(FREE_ID[i]);
   }
@@ -243,20 +241,20 @@ const createCard = (animal) => {
 `;
 };
 //_Function remove  cards:
-const removeLastElements = (n) => {
-  for (let i = 0; i < n; i++) {
+const removeLastElements = () => {
+  for (let i = 0; i < 3; i++) {
     SLIDER.lastElementChild.remove();
   }
 };
-const removeFirstElements = (n) => {
-  for (let i = 0; i < n; i++) {
+const removeFirstElements = () => {
+  for (let i = 0; i < 3; i++) {
     SLIDER.firstElementChild.remove();
   }
 };
 //_Function add new cards:
-const addNewCards = (direction, value) => {
+const addNewCards = (direction) => {
   let NEW_CARDS_ID;
-  NEW_CARDS_ID = getRandomFreeID(ALL_ID, CURRENT_ID, value);
+  NEW_CARDS_ID = getRandomFreeID(ALL_ID, CURRENT_ID);
   NEW_CARDS_ID.forEach((e) => {
     let ANIMAL = petsArray.find((animal) => animal.id == e);
     let NEW_CARD = createCard(ANIMAL);
@@ -293,13 +291,13 @@ SLIDER.addEventListener("animationend", (animation) => {
   if (animation.animationName === "move-prev") {
     SLIDER.classList.remove("transition-prev");
     DIRECTION = "left";
-    removeLastElements(AMOUNT_SHOW_CARDS);
+    removeLastElements();
   } else {
     SLIDER.classList.remove("transition-next");
     DIRECTION = "right";
-    removeFirstElements(AMOUNT_SHOW_CARDS);
+    removeFirstElements();
   }
-  addNewCards(DIRECTION, AMOUNT_SHOW_CARDS);
+  addNewCards(DIRECTION);
 
   addEventCARDS();
 
