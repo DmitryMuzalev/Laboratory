@@ -181,7 +181,6 @@ h5 {
 .card:hover {
   cursor: pointer;
   background-color: #ffffff;
-  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .card:hover .card__btn {
   background-color: #f1cdb3;
@@ -213,7 +212,7 @@ h5 {
 }
 .transition-prev {
   animation-name: move-prev;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 @keyframes move-next {
@@ -226,7 +225,7 @@ h5 {
 }
 .transition-next {
   animation-name: move-next;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 @media (max-width: 1279.98px) {
@@ -263,6 +262,7 @@ h5 {
 @media (max-width: 767.98px) {
   .slider-wrapper {
     width: 270px;
+    padding: 0px;
   }
 
   .card:nth-child(2), .card:nth-child(5), .card:nth-child(8) {

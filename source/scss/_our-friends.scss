@@ -48,7 +48,6 @@
   &:hover {
     cursor: pointer;
     background-color: $color-light-xl;
-    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     .card__btn {
       background-color: $color-primary;
     }
@@ -82,7 +81,7 @@
 
 .transition-prev {
   animation-name: move-prev;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 @keyframes move-next {
@@ -96,7 +95,7 @@
 
 .transition-next {
   animation-name: move-next;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 //____________
@@ -138,6 +137,7 @@
 @media (max-width: 767.98px) {
   .slider-wrapper {
     width: 270px;
+    padding: 0px;
   }
   .card {
     &:nth-child(2),
